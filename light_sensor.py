@@ -7,10 +7,10 @@ __author__ = 'Gus (Adapted from Adafruit)'
 __license__ = "GPL"
 __maintainer__ = "pimylifeup.com"
 
-GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.BCM) #changed to BCM!!
 
 #define the pin that goes to the circuit
-pin_to_circuit = 7
+pin_to_circuit = 4 # altered for BCM
 
 def rc_time (pin_to_circuit):
     count = 0
@@ -33,7 +33,8 @@ def rc_time (pin_to_circuit):
 try:
     # Main loop
     while True:
-        print rc_time(pin_to_circuit)
+        print(rc_time(pin_to_circuit))
+
 except KeyboardInterrupt:
     pass
 finally:
