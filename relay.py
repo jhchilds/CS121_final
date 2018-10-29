@@ -1,6 +1,8 @@
 import RPi.GPIO as GPIO
 import time
- 
+
+# Nick tests github connection!
+
 channel = 21
  
 # GPIO setup
