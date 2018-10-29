@@ -9,33 +9,57 @@ __maintainer__ = "pimylifeup.com"
 
 GPIO.setmode(GPIO.BCM)  # changed to BCM!!
 
-# define the pin that goes to the circuit
-pin_to_circuit = 4  # altered for BCM
+threshold = 700
 
+#keep track of current relay position
+relay_on = False
 
-def rc_time(pin_to_circuit):
+# set up pins
+photo_sensor_pin = 4  # altered for BCM
+relay_pin = 21
+
+def rc_time(photo_sensor_pin):
     count = 0
 
     # Output on the pin for
-    GPIO.setup(pin_to_circuit, GPIO.OUT)
-    GPIO.output(pin_to_circuit, GPIO.LOW)
+    GPIO.setup(photo_sensor_pin, GPIO.OUT)
+    GPIO.output(photo_sensor_pin, GPIO.LOW)
     time.sleep(0.1)
 
     # Change the pin back to input
-    GPIO.setup(pin_to_circuit, GPIO.IN)
+    GPIO.setup(photo_sensor_pin, GPIO.IN)
 
     # Count until the pin goes high
-    while (GPIO.input(pin_to_circuit) == GPIO.LOW):
+    while (GPIO.input(photo_sensor_pin) == GPIO.LOW):
         count += 1
 
     return count
 
+def turn_relay_on(relay_pin):
+    GPIO.output(relay_pin, GPIO.HIGH)
+    return True
+
+def turn_relay_off(relay_pin):
+    GPIO.output(relay_pin, GPIO.LOW)
+    return False
 
 # Catch when script is interupted, cleanup correctly
 try:
     # Main loop
     while True:
-        print(rc_time(pin_to_circuit))
+
+        current_val = rc_time(photo_sensor_pin)
+
+        # if photcell val is less than threshold but relay off: switch
+        if current_val < threshold:
+            if not relay_on:
+                turn_relay_on(relay_pin)
+
+        # if photcell val is greater than threshold but relay on: switch
+        else:
+            if relay_on:
+                turn_relay_off(relay_pin)
+
 
 except KeyboardInterrupt:
     pass
