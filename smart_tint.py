@@ -53,12 +53,12 @@ try:
         # if photcell val is less than threshold but relay off: switch
         if current_val < threshold:
             if not relay_on:
-                turn_relay_on(relay_pin)
+                relay_on = turn_relay_on(relay_pin)
 
         # if photcell val is greater than threshold but relay on: switch
         else:
             if relay_on:
-                turn_relay_off(relay_pin)
+                relay_on = turn_relay_off(relay_pin)
 
 
 except KeyboardInterrupt:
