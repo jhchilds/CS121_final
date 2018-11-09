@@ -46,11 +46,21 @@ def update_relay(relay_id):
     if not 'state' in request.json:
         abort(400)
 
+        
+    # here is where the changing happens, all we need to do is insert the logic for our photocell
+    # except this only fires when the button is clicked -  we need a process that will run infinitely 
     relay = matchingRelays[0]
     relay['state'] = request.json.get('state')
     UpdatePinFromRelayObject(relay)
     return jsonify({'relay': relay})
 
+# create virtual relay object "manual control"
+# function that decides if the relay is controlled manually or by the photocell
+
+# if manually, shut off access to photocell, and continue using update_relay()
+# else send the thread into the while loop from our photocell function, adding the update relay command
+# loop should always check to make sure virtual "manual control" relay is on or off, so the loop can be broken if the
+# user wants to go back to manual - should automatically overide - maybe controlled from a station hub
 
 if __name__ == "__main__":
     print("starting...")
