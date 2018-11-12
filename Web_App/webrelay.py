@@ -1,4 +1,6 @@
 import RPi.GPIO as GPIO
+# import smart_tint
+import time
 from flask import Flask, jsonify, abort, request, render_template
 from relaydefinitions import relays, relayIdToPin
 
@@ -21,6 +23,9 @@ def Setup():
 def UpdatePinFromRelayObject(relay):
     GPIO.output(relayIdToPin[relay['id']], relayStateToGPIOState[relay['state']])
 
+@app.route('/WebRelay/', methods=['GET'])
+def index():
+    return render_template('Index.html');
 
 @app.route('/WebRelay/api/relays', methods=['GET'])
 def get_relays():
@@ -46,10 +51,48 @@ def update_relay(relay_id):
     if not 'state' in request.json:
         abort(400)
 
+        
+    # here is where the changing happens, all we need to do is insert the logic for our photocell
+    # except this only fires when the button is clicked -  we need a process that will run infinitely
+
     relay = matchingRelays[0]
+
+    # gets stuck, doesnt register when overriden
+    # need to use 'threading' to allow commands to run in background/ override the while loop
+    while relay['id'] == 2 and relay['state'] == "on":
+        photo_val = rc_time(relayIdToPin[2])
+        print(photo_val)
+
     relay['state'] = request.json.get('state')
     UpdatePinFromRelayObject(relay)
     return jsonify({'relay': relay})
+
+# create virtual relay object "manual control"
+# function that decides if the relay is controlled manually or by the photocell
+
+# if manually, shut off access to photocell, and continue using update_relay()
+# else send the thread into the while loop from our photocell function, adding the update relay command
+# loop should always check to make sure virtual "manual control" relay is on or off, so the loop can be broken if the
+# user wants to go back to manual - should automatically overide - maybe controlled from a station hub
+
+def rc_time(photo_sensor_pin):
+    count = 0
+
+    # Output on the pin for
+    GPIO.setup(photo_sensor_pin, GPIO.OUT)
+    GPIO.output(photo_sensor_pin, GPIO.LOW)
+    time.sleep(0.1)
+
+    # Change the pin back to input
+    GPIO.setup(photo_sensor_pin, GPIO.IN)
+
+    # Count until the pin goes high
+    while (GPIO.input(photo_sensor_pin) == GPIO.LOW):
+        count += 1
+
+    GPIO.setup(photo_sensor_pin, GPIO.OUT)
+
+    return count
 
 
 if __name__ == "__main__":
