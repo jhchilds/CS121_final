@@ -3,6 +3,7 @@ import RPi.GPIO as GPIO
 import time
 from flask import Flask, jsonify, abort, request, render_template
 from relaydefinitions import relays, relayIdToPin
+import threading
 
 app = Flask(__name__)
 
@@ -12,6 +13,25 @@ relayStateToGPIOState = {
     'off': GPIO.LOW,
     'on': GPIO.HIGH
 }
+
+
+global photocell_on
+photocell_on = False
+
+@app.before_first_request
+def light_thread():
+    print("TESTING!")
+    def run():
+        print(photocell_on)
+        while photocell_on:
+            photo_val = rc_time(4) #hard coded to test photocell
+            print(photo_val)
+        print("TESTING 2")
+    thread = threading.Thread(target=run)
+    thread.start()
+
+
+
 
 
 def Setup():
@@ -57,11 +77,18 @@ def update_relay(relay_id):
 
     relay = matchingRelays[0]
 
-    # gets stuck, doesnt register when overriden
+    # gets stuck, doesnt register when overridden
     # need to use 'threading' to allow commands to run in background/ override the while loop
-    while relay['id'] == 2 and relay['state'] == "on":
-        photo_val = rc_time(relayIdToPin[2])
-        print(photo_val)
+
+    if relay['id'] == 2:
+        print(relay['state'])
+        if relay['state'] == "on":
+            photocell_on = True
+            light_thread()
+        else:
+            photocell_on = False
+
+
 
     relay['state'] = request.json.get('state')
     UpdatePinFromRelayObject(relay)
