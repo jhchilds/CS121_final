@@ -18,20 +18,62 @@ relayStateToGPIOState = {
 global photocell_on
 photocell_on = False
 
+#TODO this goes with integration: get rid of the hardcoding
+threshold = 700
+relay_id = 1
+photocell_id = 2
+
 @app.before_first_request
-def light_thread():
+def photocell_thread():
     print("TESTING!")
+
+    #TODO move photocell logic to a seperate file for the sake of organization
     def run():
+        matchingRelays = [relay for relay in relays if relay['id'] == relay_id]
+        relay = matchingRelays[0]
+
         print(photocell_on)
+        relay_pin = 4
         while photocell_on:
-            photo_val = rc_time(4) #hard coded to test photocell
+            photo_val = rc_time(relay_pin) #hard coded to test photocell
+
+            #TODO fix this spaghetti code.
+            #Both photocell and 'manual control' can be on at the same time, which makes no sense.
+            #Also the return values in the turn relay on/off functions no longer serve a purpose
+            #but im not sure they should be deleted because maybe we should overwrite them with the
+            #logic from 'relaydefinitions.py'.
+
+            # Also the on/off button is backwards for the photocell
+
+            #TODO integrate on/off logic to avoid collisions
+            # Also currently the photocell successfully turns ON when there is no light, but doesn't
+            # turn on again in the presence of light. I think it is somehow getting mixed signals from
+            # our on/off logic and the legacy code's on/off logic, we will need to integrate.
+
+            # if photcell val is less than threshold but relay off: switch
+            if photo_val < threshold:
+                if relay['state'] == "off":
+                    relay_on = turn_relay_on(relayIdToPin[1])
+                    time.sleep(1)
+
+            # if photcell val is greater than threshold but relay on: switch
+            else:
+                if relay['state'] == "on":
+                    relay_on = turn_relay_off(relayIdToPin[1])
+                    time.sleep(1)
+
             print(photo_val)
         print("TESTING 2")
     thread = threading.Thread(target=run)
     thread.start()
 
+def turn_relay_on(relay_pin):
+    GPIO.output(relay_pin, GPIO.HIGH)
+    return True
 
-
+def turn_relay_off(relay_pin):
+    GPIO.output(relay_pin, GPIO.LOW)
+    return False
 
 
 def Setup():
@@ -71,36 +113,23 @@ def update_relay(relay_id):
     if not 'state' in request.json:
         abort(400)
 
-        
-    # here is where the changing happens, all we need to do is insert the logic for our photocell
-    # except this only fires when the button is clicked -  we need a process that will run infinitely
 
     relay = matchingRelays[0]
 
-    # gets stuck, doesnt register when overridden
-    # need to use 'threading' to allow commands to run in background/ override the while loop
 
     if relay['id'] == 2:
+        global photocell_on
         print(relay['state'])
         if relay['state'] == "on":
             photocell_on = True
-            light_thread()
+            photocell_thread()
         else:
             photocell_on = False
-
 
 
     relay['state'] = request.json.get('state')
     UpdatePinFromRelayObject(relay)
     return jsonify({'relay': relay})
-
-# create virtual relay object "manual control"
-# function that decides if the relay is controlled manually or by the photocell
-
-# if manually, shut off access to photocell, and continue using update_relay()
-# else send the thread into the while loop from our photocell function, adding the update relay command
-# loop should always check to make sure virtual "manual control" relay is on or off, so the loop can be broken if the
-# user wants to go back to manual - should automatically overide - maybe controlled from a station hub
 
 def rc_time(photo_sensor_pin):
     count = 0
