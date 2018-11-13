@@ -14,28 +14,31 @@ relayStateToGPIOState = {
     'on': GPIO.HIGH
 }
 
+#TODO fix photocell logic: the green light turns on at setup, which shouldnt happpen
 
 global photocell_on
 photocell_on = False
 
-#TODO this goes with integration: get rid of the hardcoding
+#TODO this goes with integration: try to get rid of the hardcoding
 threshold = 700
 relay_id = 1
 photocell_id = 2
 
 @app.before_first_request
 def photocell_thread():
-    print("TESTING!")
 
     #TODO move photocell logic to a seperate file for the sake of organization
     def run():
         matchingRelays = [relay for relay in relays if relay['id'] == relay_id]
         relay = matchingRelays[0]
 
+        matchingPhotocells = [relay for relay in relays if relay['id'] == photocell_id]
+        photocell = matchingPhotocells[0]
+
         print(photocell_on)
         relay_pin = 4
         while photocell_on:
-            photo_val = rc_time(relay_pin) #hard coded to test photocell
+            photo_val = rc_time(relayIdToPin[photocell_id]) #hard coded to test photocell
 
             #TODO fix this spaghetti code.
             #Both photocell and 'manual control' can be on at the same time, which makes no sense.
@@ -53,17 +56,17 @@ def photocell_thread():
             # if photcell val is less than threshold but relay off: switch
             if photo_val < threshold:
                 if relay['state'] == "off":
-                    relay_on = turn_relay_on(relayIdToPin[1])
+                    relay_on = turn_relay_on(relayIdToPin[relay_id])
+                    print("relay is on somehow")
                     time.sleep(1)
 
             # if photcell val is greater than threshold but relay on: switch
             else:
                 if relay['state'] == "on":
-                    relay_on = turn_relay_off(relayIdToPin[1])
+                    relay_on = turn_relay_off(relayIdToPin[relay_id])
                     time.sleep(1)
 
             print(photo_val)
-        print("TESTING 2")
     thread = threading.Thread(target=run)
     thread.start()
 
@@ -78,11 +81,14 @@ def turn_relay_off(relay_pin):
 
 def Setup():
     for relay in relays:
+        print(relay['name'] + "    " + relay['state'])
+
         GPIO.setup(relayIdToPin[relay['id']], GPIO.OUT)
         GPIO.output(relayIdToPin[relay['id']], relayStateToGPIOState[relay['state']])
 
 
 def UpdatePinFromRelayObject(relay):
+    print(relay['name'] + "    " + relay['state'])
     GPIO.output(relayIdToPin[relay['id']], relayStateToGPIOState[relay['state']])
 
 @app.route('/WebRelay/', methods=['GET'])
@@ -133,6 +139,10 @@ def update_relay(relay_id):
 
 def rc_time(photo_sensor_pin):
     count = 0
+
+    # seems redundant got this error:
+    # RuntimeError: Please set pin numbering mode using GPIO.setmode(GPIO.BOARD) or GPIO.setmode(GPIO.BCM)
+    GPIO.setmode(GPIO.BCM)
 
     # Output on the pin for
     GPIO.setup(photo_sensor_pin, GPIO.OUT)
