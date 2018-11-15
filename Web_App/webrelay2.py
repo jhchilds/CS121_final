@@ -14,16 +14,6 @@ relayStateToGPIOState = {
     'on': GPIO.HIGH
 }
 
-# relays = [
-#     { 'id' : 1, 'name' : 'Smart_Tint', 'state' : 'off'},
-#     { 'id' : 2, 'name' : 'Photocell', 'state' : 'off'},
-#     ]
-#
-# relayIdToPin = {
-#     1 : 21,
-#     2 : 4,
-# }
-
 #TODO fix photocell logic: the green light turns on at setup, which shouldnt happpen
 
 global photocell_on
@@ -124,10 +114,6 @@ def update_relay(relay_id):
         global photocell_on
         print(relay['state'])
         if relay['state'] == "on":
-
-            #turn off manual control relay
-            # GPIO.output(relayIdToPin[1], relayStateToGPIOState['off'])
-
             photocell_on = True
             photocell_thread()
         else:
