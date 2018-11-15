@@ -52,15 +52,19 @@ try:
         current_val = rc_time(photo_sensor_pin)
         print(current_val)
 
+        # THIS LOGIC IS BACKWORDS - BUT IT WORKS
+        # What it says: if bright turn on
+        # What it does: if bright turn off
+
         # if photcell val is less than threshold but relay off: switch
-        if current_val < threshold:
-            if not relay_on:
+        if current_val < threshold: # if bright turn off
+            if relay_on == False:
                 relay_on = turn_relay_on(relay_pin)
                 time.sleep(1)
 
         # if photcell val is greater than threshold but relay on: switch
         else:
-            if relay_on:
+            if relay_on == True:  # if dark turn on
                 relay_on = turn_relay_off(relay_pin)
                 time.sleep(1)
 
