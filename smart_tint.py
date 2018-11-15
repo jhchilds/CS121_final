@@ -1,3 +1,4 @@
+
 #!/usr/local/bin/python
 
 import RPi.GPIO as GPIO
@@ -17,7 +18,7 @@ relay_on = False
 # set up pins
 photo_sensor_pin = 4  # altered for BCM
 relay_pin = 21
-
+GPIO.setup(relay_pin, GPIO.OUT)
 def rc_time(photo_sensor_pin):
     count = 0
 
@@ -49,6 +50,7 @@ try:
     while True:
 
         current_val = rc_time(photo_sensor_pin)
+        print(current_val)
 
         # if photcell val is less than threshold but relay off: switch
         if current_val < threshold:
