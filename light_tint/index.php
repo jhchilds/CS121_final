@@ -70,7 +70,7 @@
                  <h4 class="card-title"> Save Costs </h4>
                  <p class="card-text">
                    Automate your Smart Tint and reduce your Air Condition bill in the Summer with our
-                   photcell design.
+                   photocell design.
 
                  </p>
                </div>
