@@ -14,8 +14,6 @@ relayStateToGPIOState = {
     'on': GPIO.HIGH
 }
 
-#TODO fix photocell logic: the green light turns on at setup, which shouldnt happpen
-
 global photocell_on
 photocell_on = False
 
@@ -29,17 +27,10 @@ photocell_id = 2
 @app.before_first_request
 def photocell_thread():
 
-    #TODO move photocell logic to a seperate file for the sake of organization
     def run():
 
         while photocell_on:
             photo_val = rc_time(relayIdToPin[photocell_id]) #hard coded to test photocell
-
-            #TODO fix this spaghetti code.
-            #Both photocell and 'manual control' can be on at the same time, which makes no sense.
-            #Also the return values in the turn relay on/off functions no longer serve a purpose
-            #but im not sure they should be deleted because maybe we should overwrite them with the
-            #logic from 'relaydefinitions.py'.
 
             # Also the on/off button is backwards for the photocell
 
