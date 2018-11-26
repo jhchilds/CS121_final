@@ -52,20 +52,23 @@ body{
 }
 
 .site-title, .site-desc{
-  color: white;
+  color: black;
+  /* background-color: white; */
   font-family:'Ubuntu';
+  border-radius: 1.5em;
+  margin-left: 39%;
 }
 
 .site-title{
   margin-top: 30%;
   margin-bottom: 6%;
-  padding-left: 10%;
+  padding-left: 15%;
   font-size: 50px;
 }
 
 .site-desc{
    font-size: 15px;
-   padding-left: 10%;
+   padding-left: 15%;
 }
 
 

@@ -11,7 +11,7 @@
           <div class="d-flex flex-column">
 
             <h1 class="site-title"> Light the Dark </h1>
-            <p class="site-desc"> Using light to activate Smart Tint technology for better efficiency. </p>
+            <p class="site-desc"> Using light to activate Smart Tint technology. </p>
 
             <div class="d-flex flex-row">
               <a href="#process" class="btn site-btn1 px-4 py-3 mr-3 btn-light" role="button">Our Process</a>
@@ -186,7 +186,7 @@
            </div>
            <div class="col-md-5">
              <h1 class="text-black"> Hosting Webserver on Raspberry Pi </h1>
-             
+
              <p class="para-1">
                We used our Raspberry Pi's GPIO pins to control our Smart Tint kit
                via a Relay. We then hosted a server via Flask in Python in order to
@@ -347,8 +347,8 @@
 
     <script>
     window.sr = ScrollReveal({duration : 1500});
-    sr.reveal('.site-content .d-flex');
     sr.reveal('.site-content');
+    sr.reveal('.site-content .d-flex');
     sr.reveal('.navbar .navbar-brand');
     sr.reveal('.section-1 .card');
     sr.reveal('.section-2 .d-flex');
