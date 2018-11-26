@@ -37,13 +37,13 @@ function test_input($data) {
 
 ?>
 <body>
-  <div class ="container-fluid p-0" id="top" >
-    <div class = "site-content">
+  <div class ="container-fluid p-0 bg-light" id="top" >
+    <div class = "site-content2">
       <div class="section-5 text-left">
-        <h1 class= "heading-1 text-left text-white m-3">We Care</h1>
-        <h1 class="heading-2 text-left text-white m-3">About Your Thoughts!</h1>
+        <h1 class= "heading-1 text-left text-black m-3">We Care</h1>
+        <h1 class="heading-2 text-left text-black m-3">About Your Thoughts!</h1>
         <p>
-          <span class="error text-white m-3">* required field</span>
+          <span class="error text-black m-3">* required field</span>
         </p>
         <div class="form-inline justify-content-left p-3">
 
@@ -78,6 +78,8 @@ function test_input($data) {
 
 
 <?php
+
+
 echo $email;
 echo "<br>";
 echo $comments;

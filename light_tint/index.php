@@ -36,7 +36,7 @@
 
          </p>
 
-         <div class="row justify-content center text-center">
+         <div class="row justify-content-center text-center">
 
            <div class="col-md-4">
              <div class="card">
@@ -77,10 +77,15 @@
              </div>
            </div>
 
+           <div class="container text-center">
+             <a href="#process" class="btn btn-primary m-2" role="button">Our Process</a>
+             <a href="#top" class="btn btn-primary m-2" role="button">Back To Top</a>
+           </div>
          </div>
 
        </div>
      </div>
+
 <!--****************************END SECTION 1********************************-->
 
 
@@ -104,9 +109,9 @@
                via a Relay. We then hosted a server via Flask in Python in order to
                control this relay via this Web App.
             </p>
-            <a href="#step2" class="btn btn-danger" role="button">Next</a>
+            <a href="#step2" class="btn btn-primary" role="button">Next</a>
 
-            <a href="#top" class="btn btn-danger" role="button">Top</a>
+            <a href="#top" class="btn btn-primary" role="button">Back To Top</a>
            </div>
          </div>
        </div>
@@ -132,8 +137,8 @@
                control this relay via this Web App.
             </p>
 
-            <a href="#step3" class="btn btn-danger" role="button">Next</a>
-            <a href="#top" class="btn btn-danger" role="button">Top</a>
+            <a href="#step3" class="btn btn-primary" role="button">Next</a>
+            <a href="#top" class="btn btn-primary" role="button">Back To Top</a>
 
            </div>
          </div>
@@ -160,8 +165,8 @@
                control this relay via this Web App.
             </p>
 
-            <a href="#step4" class="btn btn-danger" role="button">Next</a>
-            <a href="#top" class="btn btn-danger" role="button">Top</a>
+            <a href="#step4" class="btn btn-primary" role="button">Next</a>
+            <a href="#top" class="btn btn-primary" role="button">Back To Top</a>
 
            </div>
          </div>
@@ -187,7 +192,7 @@
                via a Relay. We then hosted a server via Flask in Python in order to
                control this relay via this Web App.
             </p>
-            <a href="#top" class="btn btn-danger" role="button">Top</a>
+            <a href="#top" class="btn btn-primary" role="button">Back To Top</a>
 
            </div>
          </div>
