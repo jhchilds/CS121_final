@@ -40,7 +40,7 @@
 
            <div class="col-md-4">
              <div class="card">
-               <img src="images/adult-businessman-computer-374598.jpg" alt="Businessman Window" class="card-img-top">
+               <img src="images/office.jpg" alt="Businessman Window" class="card-img-top">
                <div class="card-body">
                  <h4 class="card-title"> Boost Productivity </h4>
                  <p class="card-text">
