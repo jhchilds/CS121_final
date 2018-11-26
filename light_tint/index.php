@@ -207,9 +207,9 @@
            <div class="d-flex flex-column m-5">
 
              <h1 class="heading-1">Comments or Questions?</h1>
-             <p class="para"> Let us know!</p>
+             <p class="para"> Contact Us!</p>
 
-             <a href="form2.php" class="btn btn-danger" role="button">Form</a>
+             <a href="#" class="btn btn-danger" role="button">Contact</a>
            </div>
 
          </div>
