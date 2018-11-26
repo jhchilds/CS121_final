@@ -186,7 +186,7 @@
            </div>
            <div class="col-md-5">
              <h1 class="text-black"> Hosting Webserver on Raspberry Pi </h1>
-             <!-- <a href="#">Join Us</a> -->
+             
              <p class="para-1">
                We used our Raspberry Pi's GPIO pins to control our Smart Tint kit
                via a Relay. We then hosted a server via Flask in Python in order to

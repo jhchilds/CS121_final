@@ -232,21 +232,7 @@ body{
 .section-2b .col-md-7 img{
   width: 590px;
 }
-/* .section-2b a{
-  color:black;
-  font-size: 40px;
-  text-decoration: none;
 
-  font-family: 'Lalezar';
-
-} */
-
-/* .section-2b a:hover{
-  color:red;
-  text-transform: capitalize;
-  text-decoration: underline;
-
-} */
 
 .section-2b .para-1{
   color: black;
@@ -277,22 +263,8 @@ body{
 .section-2c .col-md-7 img{
   width: 590px;
 }
-/* .section-2c a{
-  color:black;
-  font-size: 40px;
-  text-decoration: none;
-  font-family: 'Lalezar';
 
-} */
-
-/* .section-2b a:hover{
-  color:red;
-  text-transform: capitalize;
-  text-decoration: underline;
-
-} */
-
-.section-2b .para-1{
+.section-2c .para-1{
   color: black;
   font-family: 'Ubuntu';
   margin-top: 7%;
