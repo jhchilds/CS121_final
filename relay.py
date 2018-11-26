@@ -1,23 +1,23 @@
 import RPi.GPIO as GPIO
 import time
 
-# Nick tests github connection!
+# Nick tests github connection! Take 2
 
 channel = 21
- 
+
 # GPIO setup
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(channel, GPIO.OUT)
- 
- 
+
+
 def motor_on(pin):
     GPIO.output(pin, GPIO.HIGH)  # Turn motor on
- 
- 
+
+
 def motor_off(pin):
     GPIO.output(pin, GPIO.LOW)  # Turn motor off
- 
- 
+
+
 if __name__ == '__main__':
     try:
         motor_on(channel)
