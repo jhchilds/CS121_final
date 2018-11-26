@@ -43,13 +43,6 @@ def photocell_thread():
 
             # Also the on/off button is backwards for the photocell
 
-            #TODO integrate on/off logic to avoid collisions
-            # Also currently the photocell successfully turns ON when there is no light, but doesn't
-            # turn on again in the presence of light. I think it is somehow getting mixed signals from
-            # our on/off logic and the legacy code's on/off logic, we will need to integrate.
-
-
-
             # THIS LOGIC IS BACKWORDS - BUT IT WORKS
             # What it says: if bright turn on
             # What it does: if bright turn off
