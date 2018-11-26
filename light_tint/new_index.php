@@ -1,6 +1,6 @@
 <?php
-    include("../top.php");
-    include("../header.php");
+    include("top.php");
+    include("header.php");
 ?>
 <body>
 <div ng-controller="RelaysController">
