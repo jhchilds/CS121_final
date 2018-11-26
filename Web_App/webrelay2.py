@@ -29,14 +29,7 @@ def photocell_thread():
 
     #TODO move photocell logic to a seperate file for the sake of organization
     def run():
-        matchingRelays = [relay for relay in relays if relay['id'] == relay_id]
-        relay = matchingRelays[0]
 
-        matchingPhotocells = [relay for relay in relays if relay['id'] == photocell_id]
-        photocell = matchingPhotocells[0]
-
-        print(photocell_on)
-        relay_pin = 4
         while photocell_on:
             photo_val = rc_time(relayIdToPin[photocell_id]) #hard coded to test photocell
 
@@ -53,31 +46,25 @@ def photocell_thread():
             # turn on again in the presence of light. I think it is somehow getting mixed signals from
             # our on/off logic and the legacy code's on/off logic, we will need to integrate.
 
+
+
+            # THIS LOGIC IS BACKWORDS - BUT IT WORKS
+            # What it says: if bright turn on
+            # What it does: if bright turn off
+
             # if photcell val is less than threshold but relay off: switch
-            if photo_val < threshold:
-                if relay['state'] == "off":
-                    relay_on = turn_relay_on(relayIdToPin[relay_id])
-                    print("relay is on somehow")
-                    time.sleep(1)
+            if photo_val < threshold:  # if bright turn off
+                GPIO.output(relayIdToPin[1], relayStateToGPIOState["on"])
+
 
             # if photcell val is greater than threshold but relay on: switch
             else:
-                if relay['state'] == "on":
-                    relay_on = turn_relay_off(relayIdToPin[relay_id])
-                    time.sleep(1)
+                GPIO.output(relayIdToPin[1], relayStateToGPIOState["off"])
+
 
             print(photo_val)
     thread = threading.Thread(target=run)
     thread.start()
-
-def turn_relay_on(relay_pin):
-    GPIO.output(relay_pin, GPIO.HIGH)
-    return True
-
-def turn_relay_off(relay_pin):
-    GPIO.output(relay_pin, GPIO.LOW)
-    return False
-
 
 def Setup():
     for relay in relays:
@@ -126,15 +113,21 @@ def update_relay(relay_id):
     if relay['id'] == 2:
         global photocell_on
         print(relay['state'])
-        if relay['state'] == "on": 
+        if relay['state'] == "on":
             photocell_on = True
             photocell_thread()
         else:
             photocell_on = False
 
+    # turn of photocell control
+    elif relay['state'] == 'on':
+        GPIO.output(relayIdToPin[2], relayStateToGPIOState['off'])
 
     relay['state'] = request.json.get('state')
     UpdatePinFromRelayObject(relay)
+
+    print(relay['name'] + "    " + relay['state'])
+
     return jsonify({'relay': relay})
 
 def rc_time(photo_sensor_pin):
