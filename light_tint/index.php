@@ -78,8 +78,8 @@
            </div>
 
            <div class="container text-center">
-             <a href="#process" class="btn btn-primary m-2" role="button">Our Process</a>
-             <a href="#top" class="btn btn-primary m-2" role="button">Back To Top</a>
+             <a href="#process" class="btn btn-primary " role="button">Our Process</a>
+             <a href="#top" class="btn btn-primary " role="button">Back To Top</a>
            </div>
          </div>
 
@@ -207,9 +207,9 @@
            <div class="d-flex flex-column m-5">
 
              <h1 class="heading-1">Comments or Questions?</h1>
-             <p class="para"> Contact Us!</p>
+             <!-- <p class="para"> Contact Us!</p> -->
 
-             <a href="#" class="btn btn-danger" role="button">Contact</a>
+             <a href="#" class="btn btn-primary" role="button">Contact Us!</a>
            </div>
 
          </div>
