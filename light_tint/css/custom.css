@@ -46,7 +46,7 @@ body{
 }
 
 .site-content{
-  background-image: url('../images/illuminated-light-light-bulb-247789.jpeg');
+  background-image: url('../images/home.jpg');
   background-attachment: fixed;
   background-size: cover;
 }
@@ -300,7 +300,7 @@ body{
 }
 /*************************SECTION 3 Styling**************************/
 .section-3 .container-fluid{
-  background-image: url('../images/illuminated-light-light-bulb-247789.jpeg');
+  background-image: url('../images/home.jpg');
   background-size: cover;
   background-attachment: fixed;
 }
