@@ -16,7 +16,7 @@
             <a href="index.php" class="nav-link">Home </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Form</a>
+            <a href="form2.php" class="nav-link">Form</a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">Code</a>

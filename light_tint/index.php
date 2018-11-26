@@ -204,7 +204,7 @@
              <h1 class="heading-1">Comments or Questions?</h1>
              <p class="para"> Let us know!</p>
 
-             <a href="#top" class="btn btn-danger" role="button">Form</a>
+             <a href="form2.php" class="btn btn-danger" role="button">Form</a>
            </div>
 
          </div>
@@ -323,7 +323,7 @@
   <!--***********************START SECTION 5/Footer**************************-->
 
 
-    <?php 
+    <?php
       include("footer.php");
      ?>
 

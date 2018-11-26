@@ -1,12 +1,10 @@
 <?php
     include("top.php");
     include("header.php");
-?>
-<main>
-<?php
+
 // define variables and set to empty values
- $emailErr = $genderErr = "";
- $email = $comment = $gender = "";
+ $emailErr = "";
+ $email = $comments = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["email"])) {
@@ -21,17 +19,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
 
-if (empty($_POST["comment"])) {
-   $comment = "";
+if (empty($_POST["comments"])) {
+   $comments = "";
  } else {
-   $comment = test_input($_POST["comment"]);
+   $comments = test_input($_POST["comments"]);
  }
 
- if (empty($_POST["gender"])) {
-     $genderErr = "Gender is required";
-   } else {
-     $gender = test_input($_POST["gender"]);
-   }
 }
 
 function test_input($data) {
@@ -42,57 +35,52 @@ function test_input($data) {
 }
 
 
-
-
-
-
-
-
 ?>
-<div class="section-2 bg-light" id="process">
-  <div class="container">
-<div class="section-5 text-left">
-  <h1 class= "heading-1 text-left">We Care</h1>
-  <h1 class="heading-2 text-left">About Your Thoughts!</h1>
-  <p>
-    <span class="error">* required field</span>
-  </p>
-  <div class="form-inline justify-content-left">
+<body>
+  <div class ="container-fluid p-0" id="top" >
+    <div class = "site-content">
+      <div class="section-5 text-left">
+        <h1 class= "heading-1 text-left text-white m-3">We Care</h1>
+        <h1 class="heading-2 text-left text-white m-3">About Your Thoughts!</h1>
+        <p>
+          <span class="error text-white m-3">* required field</span>
+        </p>
+        <div class="form-inline justify-content-left p-3">
 
-    <form method="post" action= "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-
-
-
-
-    <input type="text" class="form-control px-4 py-2" placeholder="Email" name="email" size="34" value="<?php echo $email;?>">
-    <span class="error">* <?php echo $emailErr;?></span>
-    <br><br>
+          <form method="post" action= "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
 
-    <div class="purple-border">
-    <textarea placeholder="   Comments" name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
+
+
+            <input type="text" class="form-control px-4 py-2" placeholder="Email" name="email" size="34" value="<?php echo $email;?>">
+            <span class="error">* <?php echo $emailErr;?></span>
+            <br><br>
+
+
+            <div class="purple-border">
+              <textarea placeholder="   Comments" name="comments" rows="5" cols="40"><?php echo $comments;?></textarea>
+            </div>
+            <br><br>
+
+
+
+
+
+            <input type="submit" id="sub_button" name="submit" value="Submit" class="btn btn-danger px-4 py-2">
+          </form>
+
+
+        </div>
+      </div>
+
     </div>
-    <br><br>
+  </div>
 
-
-
-
-
-    <input type="submit" id="sub_button" name="submit" value="Submit" class="btn btn-danger px-4 py-2">
-</form>
-
-
-</div>
-</div>
-
-</div>
-</div>
-
-<main>
 
 <?php
-
 echo $email;
+echo "<br>";
+echo $comments;
 echo "<br>";
 include("footer.php");
 ?>

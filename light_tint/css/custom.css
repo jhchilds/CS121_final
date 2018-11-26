@@ -354,6 +354,10 @@ body{
 .footer{
   text-align: center;
 }
+/*********************Form2.php Styling*********************/
+.error{
+  color: 	rgb(255,99,71);
+}
 
 /*********************Styling for Tablets & Mobile Devices*********************/
 
