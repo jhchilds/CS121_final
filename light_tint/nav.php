@@ -30,7 +30,7 @@
 
         </ul>
 
-        <form action = "http://10.245.52.190/WebRelay/" method="get" class="form-inline my-2 my-lg-0">
+        <form action = "/Web_App/index.html" method="get" class="form-inline my-2 my-lg-0">
           <button class="btn menu-right-btn border" type="submit">
             Application
           </button>
