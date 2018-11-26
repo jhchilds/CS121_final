@@ -19,6 +19,8 @@ relayStateToGPIOState = {
 global photocell_on
 photocell_on = False
 
+
+
 #TODO this goes with integration: try to get rid of the hardcoding
 threshold = 700
 relay_id = 1
