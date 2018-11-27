@@ -73,7 +73,7 @@ body{
 
 
 .site-btn1{
-  margin-left: 10%;
+  margin-left: 0%;
   background-color: black;
   color: white;
   margin-bottom: 90%;
@@ -81,7 +81,7 @@ body{
 }
 
 .site-btn2{
-  margin-left: 0%;
+  margin-left: 10%;
   background-color: black;
   color: white;
   margin-bottom: 90%;
@@ -121,7 +121,12 @@ body{
 }
 
 .card{
-  width: 20rem;
+
+}
+
+.section-1 .btn{
+margin: 2%;
+
 }
 /*************************SECTION 2 Styling (STEP ONE)*************************/
 .section-2{
@@ -285,13 +290,14 @@ body{
   margin-bottom: 4%;
   font-family: 'Ubuntu';
   width: 80%;
-  color: whitesmoke;
+  color: black;
+  background-color: rgba(0, 0, 255, .8);
 }
 
 .section-3 .para{
   width:80%;
   font-family: 'Ubuntu';
-  color: whitesmoke;
+  color: black;
   margin-bottom: 7%;
 
 }

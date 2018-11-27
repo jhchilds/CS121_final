@@ -14,8 +14,8 @@
             <p class="site-desc"> Using light to activate Smart Tint technology. </p>
 
             <div class="d-flex flex-row">
-              <a href="#process" class="btn site-btn1 px-4 py-3 mr-3 btn-light" role="button">Our Process</a>
               <a href="#feature" class="btn site-btn2 px-4 py-3 mr-3 btn-light" role="button">Special Features</a>
+              <a href="#process" class="btn site-btn1 px-4 py-3 mr-3 btn-light" role="button">Our Process</a>
             </div>
 
           </div>
@@ -203,7 +203,7 @@
 
      <div class="section-3">
        <div class="container-fluid">
-         <div class="d-flex justify-content-end">
+         <div class="d-flex justify -content-end">
            <div class="d-flex flex-column m-5">
 
              <h1 class="heading-1">Comments or Questions?</h1>
