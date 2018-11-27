@@ -291,7 +291,7 @@ margin: 2%;
   font-family: 'Ubuntu';
   width: 80%;
   color: black;
-  background-color: rgba(0, 0, 255, .8);
+  /* background-color: rgba(0, 0, 255, .8); */
 }
 
 .section-3 .para{
