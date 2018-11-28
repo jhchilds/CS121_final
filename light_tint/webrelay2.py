@@ -66,7 +66,7 @@ def UpdatePinFromRelayObject(relay):
 
 @app.route('/WebRelay/', methods=['GET'])
 def index():
-    return render_template('Index.html');
+    return render_template('index.php');
 
 @app.route('/WebRelay/api/relays', methods=['GET'])
 def get_relays():
