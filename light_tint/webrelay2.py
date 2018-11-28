@@ -64,16 +64,16 @@ def UpdatePinFromRelayObject(relay):
     print(relay['name'] + "    " + relay['state'])
     GPIO.output(relayIdToPin[relay['id']], relayStateToGPIOState[relay['state']])
 
-@app.route('/WebRelay/', methods=['GET'])
+@app.route('/', methods=['GET'])
 def index():
     return render_template('index.php');
 
-@app.route('/WebRelay/api/relays', methods=['GET'])
+@app.route('/api/relays', methods=['GET'])
 def get_relays():
     return jsonify({'relays': relays})
 
 
-@app.route('/WebRelay/api/relays/<int:relay_id>', methods=['GET'])
+@app.route('/api/relays/<int:relay_id>', methods=['GET'])
 def get_relay(relay_id):
     matchingRelays = [relay for relay in relays if relay['id'] == relay_id]
     if len(matchingRelays) == 0:
@@ -81,7 +81,7 @@ def get_relay(relay_id):
     return jsonify({'relay': matchingRelays[0]})
 
 
-@app.route('/WebRelay/api/relays/<int:relay_id>', methods=['PUT'])
+@app.route('/api/relays/<int:relay_id>', methods=['PUT'])
 def update_relay(relay_id):
     matchingRelays = [relay for relay in relays if relay['id'] == relay_id]
 
