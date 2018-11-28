@@ -285,7 +285,7 @@ margin: 2%;
 }
 /*************************SECTION 3 Styling**************************/
 .section-3 .container-fluid{
-  background-image: url('../images/home.jpg');
+  background-image: url('../images/candle.jpeg');
   background-size: cover;
   background-attachment: fixed;
 }
@@ -294,8 +294,8 @@ margin: 2%;
   margin-top: 20%;
   margin-bottom: 4%;
   font-family: 'Ubuntu';
-  width: 80%;
-  color: black;
+  /* width: 80%; */
+  color: white;
   /* background-color: rgba(0, 0, 255, .8); */
 }
 

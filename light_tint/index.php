@@ -203,7 +203,7 @@
 
      <div class="section-3">
        <div class="container-fluid">
-         <div class="d-flex justify -content-end">
+         <div class="d-flex justify-content-center">
            <div class="d-flex flex-column m-5">
 
              <h1 class="heading-1">Comments or Questions?</h1>

@@ -28,7 +28,7 @@
 
 <nav class = "navbar navbar-expand-lg navbar-light">
 
-      <a href = "../index.php" class = "navbar-brand ml-3 "> <span style = "color:black;">LIGH</span><span style = "color:yellow;">T</span><span style = "color:black;">INT</span> </a>
+  <a href = "../index.php" class = "navbar-brand ml-3 "> <span style = "color:black;">LIGH</span><span style = "color:rgb(0,100,250);">T</span><span style = "color:black;">INT</span> </a>
 
       <button class = "navbar-toggler" type="button" data-toggle="collapse" data-target = "#navbarMenu"
       aria-controls="navbarMenu" aria-expanded = "false" aria-label="Toggle Navigation">
