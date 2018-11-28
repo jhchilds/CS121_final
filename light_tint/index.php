@@ -54,7 +54,7 @@
              <div class="card">
                <img src="images/brown-contemporary-curtains-910458.jpg" alt="UV Rays" class="card-img-top">
                <div class="card-body">
-                 <h4 class="card-title"> Blocks UV Rays </h4>
+                 <h4 class="card-title"> Block UV Rays </h4>
                  <p class="card-text">
                    Having a photocell switch off your smart tint during the day helps
                    block UV Rays during the day and save costs.
@@ -94,20 +94,18 @@
 
      <div class="section-2 bg-light" id="process">
        <div class="container">
-         <h1 class= "heading-1 text-center">Step One</h1>
-         <h1 class="heading-2 text-center">Smart Tint Technology</h1>
+         <h1 class= "heading-1 text-center"> Development Process </h1>
+         <h1 class="heading-2 text-center"> Step One </h1>
          <hr>
          <div class="row">
            <div class="col-md-7">
              <img src="../images/rpi.jpeg" alt="Light Lamps">
            </div>
            <div class="col-md-5">
-             <h1 class="text-black"> Hosting Webserver on Raspberry Pi </h1>
+             <h1 class="text-black"> Proof of Concept </h1>
              <!-- <a href="#">Join Us</a> -->
              <p class="para-1">
-               We used our Raspberry Pi's GPIO pins to control our Smart Tint kit
-               via a Relay. We then hosted a server via Flask in Python in order to
-               control this relay via this Web App.
+               In order to be realistic about our ideas, we had to test the most basic yet essential components of the project.  The photocell performed just as hoped and the Smart Tint device arrived from the manufacturer intact and functional.
             </p>
             <a href="#step2" class="btn btn-primary" role="button">Next</a>
 
@@ -121,20 +119,18 @@
 
      <div class="section-2a bg-light" id="step2">
        <div class="container">
-         <h1 class= "heading-1 text-center">Step Two</h1>
-         <h1 class="heading-2 text-center"> Smart Tint Technology </h1>
+         <h1 class= "heading-1 text-center">   </h1>
+         <h1 class="heading-2 text-center"> Step Two </h1>
          <hr>
          <div class="row">
            <div class="col-md-7">
              <img src="../images/rpi.jpeg" alt="Light Lamps">
            </div>
            <div class="col-md-5">
-             <h1 class="text-black"> Hosting Webserver on Raspberry Pi </h1>
+             <h1 class="text-black"> Assembly and Wiring </h1>
              <!-- <a href="#">Join Us</a> -->
              <p class="para-1">
-               We used our Raspberry Pi's GPIO pins to control our Smart Tint kit
-               via a Relay. We then hosted a server via Flask in Python in order to
-               control this relay via this Web App.
+               The next task was to actually connect the Smart Tint device to our RBPi, which involved cutting out the original switch that shipped with the device and stripping the wires.  A Relay was used as a bridge between the RBPi’s GPIO breadboard and Smart Tint device in order to provide the correct voltage (60V AC).
             </p>
 
             <a href="#step3" class="btn btn-primary" role="button">Next</a>
@@ -149,20 +145,18 @@
 
      <div class="section-2b bg-light" id="step3">
        <div class="container">
-         <h1 class= "heading-1 text-center">Step Three</h1>
-         <h1 class="heading-2 text-center"> Smart Tint Technology </h1>
+         <h1 class= "heading-1 text-center">   </h1>
+         <h1 class="heading-2 text-center">   </h1>
          <hr>
          <div class="row">
            <div class="col-md-7">
              <img src="../images/rpi.jpeg" alt="Light Lamps">
            </div>
            <div class="col-md-5">
-             <h1 class="text-black"> Hosting Webserver on Raspberry Pi </h1>
+             <h1 class="text-black"> Raspberry Pi Control </h1>
              <!-- <a href="#">Join Us</a> -->
              <p class="para-1">
-               We used our Raspberry Pi's GPIO pins to control our Smart Tint kit
-               via a Relay. We then hosted a server via Flask in Python in order to
-               control this relay via this Web App.
+               With the devices connected, commands could be manually sent from the RBPi to activate and deactivate the Smart Tint film.  A script could thenceforth be used to take readings from the photocell and adjust the device accordingly.
             </p>
 
             <a href="#step4" class="btn btn-primary" role="button">Next</a>
@@ -177,20 +171,18 @@
 
      <div class="section-2c bg-light" id="step4">
        <div class="container">
-         <h1 class= "heading-1 text-center">Step Four</h1>
-         <h1 class="heading-2 text-center"> Smart Tint Technology </h1>
+         <h1 class= "heading-1 text-center">   </h1>
+         <h1 class="heading-2 text-center"> Step Four </h1>
          <hr>
          <div class="row">
            <div class="col-md-7">
              <img src="../images/rpi.jpeg" alt="Light Lamps">
            </div>
            <div class="col-md-5">
-             <h1 class="text-black"> Hosting Webserver on Raspberry Pi </h1>
+             <h1 class="text-black"> Web Interface </h1>
 
              <p class="para-1">
-               We used our Raspberry Pi's GPIO pins to control our Smart Tint kit
-               via a Relay. We then hosted a server via Flask in Python in order to
-               control this relay via this Web App.
+               With the device at the ready, we shifted focus to the User Experience.  We designed this web application to be hosted on the RBPi with the Smart Tint device.  In this way, the user can log on remotely on their computer or even via phone/tablet to control the device.
             </p>
             <a href="#top" class="btn btn-primary" role="button">Back To Top</a>
 
