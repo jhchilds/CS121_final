@@ -10,7 +10,7 @@
         <div class="d-flex justify-content-center">
           <div class="d-flex flex-column">
 
-            <h1 class="site-title"> Light the Dark </h1>
+            <h1 class="site-title"> Dimming the Lights </h1>
             <p class="site-desc"> Using light to activate Smart Tint technology. </p>
 
             <div class="d-flex flex-row">
