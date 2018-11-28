@@ -45,7 +45,7 @@ myApp.controller('RelaysController', ['$scope', '$http', function($scope, $http)
     console.log(relay.name);
     } else if (relay.name == 'Smart Tint'){
         // if photocell already on
-        console.log("smart tint fucvk you");
+
 
         if ($scope.relays[1].state == "off") {
             console.log("photocell is already on");

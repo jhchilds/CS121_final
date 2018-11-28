@@ -348,6 +348,7 @@
     <script>
     window.sr = ScrollReveal({duration : 1500});
     sr.reveal('.site-content');
+    sr.reveal('.site-content .img');
     sr.reveal('.site-content .d-flex');
     sr.reveal('.navbar .navbar-brand');
     sr.reveal('.section-1 .card');
