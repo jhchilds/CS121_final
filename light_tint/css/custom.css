@@ -46,34 +46,38 @@ body{
 }
 
 .site-content{
-  background-image: url('../images/home.jpg');
+  background-image: url('../images/candle.jpeg');
+  /* background-color: black; */
   background-attachment: fixed;
   background-size: cover;
 }
 
 .site-title, .site-desc{
-  color: black;
+  color: white;
   /* background-color: white; */
   font-family:'Ubuntu';
   border-radius: 1.5em;
-  margin-left: 39%;
+  /* margin-left: 39%; */
 }
 
 .site-title{
   margin-top: 30%;
-  margin-bottom: 6%;
-  padding-left: 15%;
+  margin-bottom: 10%;
+  /* padding-left: 15%; */
   font-size: 50px;
 }
 
 .site-desc{
-   font-size: 15px;
-   padding-left: 15%;
+  margin-bottom: 40%;
+  /* display: none; */
+  /* text-align: center; */
+   /* font-size: 15px; */
+   /* padding-right: 15%; */
 }
 
 
 .site-btn1{
-  margin-left: 0%;
+  /* margin-left: 0%; */
   background-color: black;
   color: white;
   margin-bottom: 90%;
@@ -81,16 +85,17 @@ body{
 }
 
 .site-btn2{
-  margin-left: 10%;
+  /* margin-left: 10%; */
   background-color: black;
   color: white;
   margin-bottom: 90%;
   margin-top: 30%;
 }
-/* .site-btn1, .site-btn2{
-  margin-top: 10%;
-  margin-bottom: 50%;
-} */
+ .site-btn1, .site-btn2{
+   /* display: none;  */
+   margin-top: 10%;
+  margin-bottom: 100%;
+}
 
 
 /*************************SECTION 1 Styling**************************/

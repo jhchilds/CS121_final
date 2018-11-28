@@ -7,7 +7,7 @@
     <div class ="container-fluid p-0" id="top" >
       <div class = "site-content">
 
-        <div class="d-flex justify-content-left">
+        <div class="d-flex justify-content-center">
           <div class="d-flex flex-column">
 
             <h1 class="site-title"> Light the Dark </h1>
