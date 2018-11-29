@@ -68,7 +68,7 @@ def UpdatePinFromRelayObject(relay):
 def index():
     return render_template('index.php');
 
-@app.route('/css/', <'css/:custom.css'>)
+@app.route('/css/', 'css/:custom.css')
 def download_file('custom.css'):
     return send_from_directory(app.config['UPLOAD_FOLDER'],'custom.css');
 
