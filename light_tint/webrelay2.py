@@ -68,6 +68,12 @@ def UpdatePinFromRelayObject(relay):
 def index():
     return render_template('index.php');
 
+@app.route('/css', methods=['GET'])
+def index():
+    return render_template('css/custom.css');
+
+
+
 @app.route('/api/relays', methods=['GET'])
 def get_relays():
     return jsonify({'relays': relays})
