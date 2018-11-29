@@ -12,13 +12,13 @@
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
      <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-     <link rel="stylesheet" href="css/custom.css" >
+     <link rel="stylesheet" href="../css/custom.css" >
 
      <!-- %%%%%%%%%%%% LINKS FOR WEB APP %%%%%%%%%%%%-->
      <script data-require="angular.js@1.4.8" data-semver="1.4.8" src="https://code.angularjs.org/1.4.8/angular.js"></script>
      <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.css" /> -->
      <script src="../static/Controller.js"></script>
-     <link rel="stylesheet" href="/static/style.css" />
+     <!-- <link rel="stylesheet" href="../static/style.css" /> -->
      <!-- %%%%%%%%%%%% LINKS FOR WEB APP %%%%%%%%%%%%-->
 
      <title>Light Tint</title>
@@ -393,10 +393,18 @@
   <!--***************************End SECTION 4*******************************-->
   <!--***********************START SECTION 5/Footer**************************-->
 
-
-    <?php
-      include("footer.php");
-     ?>
+  <footer class="footer">
+    <div class="social" style="margin:1%;">
+      <div class="d-flex flex-row justify-content-center">
+        <i class="fab fa-facebook-f m-2"></i>
+        <i class="fab fa-twitter m-2"></i>
+        <i class="fab fa-instagram m-2"></i>
+        <i class="fab fa-youtube m-2"></i>
+      </div>
+    </div>
+        <hr>
+        <h5 style="color:rgba(0,0,0,0.59);">Three Circuiteers &copy; 2018</h5>
+  </footer>
 
 
    </main>
@@ -405,8 +413,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="../javascript/smooth_scrolling.js"></script>
-    <script src="../javascript/jquery-3.3.1.min.js"></script>
+    <script src="javascript/smooth_scrolling.js"></script>
+    <script src="javascript/jquery-3.3.1.min.js"></script>
     <!-- <script src="../javascript/redirect.js"></script> -->
 
 
