@@ -173,7 +173,7 @@
          <hr>
          <div class="row">
            <div class="col-md-7">
-             <img src="../images/rpi.jpeg" alt="Light Lamps">
+             <img src="../static/images/rpi.jpeg" alt="Light Lamps">
            </div>
            <div class="col-md-5">
              <h1 class="text-black"> Proof of Concept </h1>
