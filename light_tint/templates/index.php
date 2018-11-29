@@ -250,7 +250,7 @@
          <hr>
          <div class="row">
            <div class="col-md-7">
-             <img src="../images/rpi.jpeg" alt="Light Lamps">
+             <img src="../images/remote.jpg" alt="Remote Cotrol">
            </div>
            <div class="col-md-5">
              <h1 class="text-black"> Web Interface </h1>
