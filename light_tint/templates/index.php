@@ -114,7 +114,7 @@
 
            <div class="col-md-4">
              <div class="card">
-               <img src="images/office.jpg" alt="Office Setting" class="card-img-top">
+               <img src="../static/images/office.jpg" alt="Office Setting" class="card-img-top">
                <div class="card-body">
                  <h4 class="card-title"> Boost Productivity </h4>
                  <p class="card-text">
@@ -126,7 +126,7 @@
 
            <div class="col-md-4">
              <div class="card">
-               <img src="images/brown-contemporary-curtains-910458.jpg" alt="UV Rays" class="card-img-top">
+               <img src="../static/images/brown-contemporary-curtains-910458.jpg" alt="UV Rays" class="card-img-top">
                <div class="card-body">
                  <h4 class="card-title"> Block UV Rays </h4>
                  <p class="card-text">
@@ -139,7 +139,7 @@
 
            <div class="col-md-4">
              <div class="card">
-               <img src="images/electricity.jpg" alt="Electricity Usage" class="card-img-top">
+               <img src="../static/images/electricity.jpg" alt="Electricity Usage" class="card-img-top">
                <div class="card-body">
                  <h4 class="card-title"> Save Costs </h4>
                  <p class="card-text">
