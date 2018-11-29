@@ -45,10 +45,10 @@
             <div class="collapse navbar-collapse" id="navbarMenu">
               <ul class="navbar-nav mr-auto" >
                 <li class="nav-item active">
-                  <a href="index.php" class="nav-link">Home </a>
+                  <a href="index.html" class="nav-link">Home </a>
                 </li>
                 <li class="nav-item">
-                  <a href="../static/new_index.php" class="nav-link">Application</a>
+                  <a href="../static/new_index.html" class="nav-link">Application</a>
                 </li>
                 <li class="nav-item">
                   <a href="#" class="nav-link">Code</a>
@@ -62,7 +62,7 @@
 
               </ul>
 
-              <form action = "../static/new_index.php" method="get" class="form-inline my-2 my-lg-0">
+              <form action = "../static/new_index.html" method="get" class="form-inline my-2 my-lg-0">
                 <button class="btn menu-right-btn border" type="submit">
                   Application
                 </button>
