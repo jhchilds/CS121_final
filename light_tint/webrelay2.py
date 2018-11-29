@@ -64,7 +64,7 @@ def UpdatePinFromRelayObject(relay):
     print(relay['name'] + "    " + relay['state'])
     GPIO.output(relayIdToPin[relay['id']], relayStateToGPIOState[relay['state']])
 
-@app.route('/', methods=['GET'])
+@app.route('/WebRelay/', methods=['GET'])
 def index():
     return render_template('new_index.html');
 
