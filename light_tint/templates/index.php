@@ -173,7 +173,7 @@
          <hr>
          <div class="row">
            <div class="col-md-7">
-             <img src="../static/images/rpi.jpeg" alt="Light Lamps">
+             <img src="../static/images/rpi.jpeg" alt="rpi.jpg">
            </div>
            <div class="col-md-5">
              <h1 class="text-black"> Proof of Concept </h1>
@@ -198,7 +198,7 @@
          <hr>
          <div class="row">
            <div class="col-md-7">
-             <img src="../images/wiring.jpg" alt="Circuit Wiring">
+             <img src="../static/images/wiring.jpg" alt="Circuit Wiring">
            </div>
            <div class="col-md-5">
              <h1 class="text-black"> Assembly and Wiring </h1>
@@ -224,7 +224,7 @@
          <hr>
          <div class="row">
            <div class="col-md-7">
-             <img src="../images/rpi.jpeg" alt="Light Lamps">
+             <img src="../static/images/rpi.jpeg" alt="Light Lamps">
            </div>
            <div class="col-md-5">
              <h1 class="text-black"> Raspberry Pi Control </h1>
@@ -250,7 +250,7 @@
          <hr>
          <div class="row">
            <div class="col-md-7">
-             <img src="../images/remote.jpg" alt="Remote Cotrol">
+             <img src="../static/images/remote.jpg" alt="Remote Cotrol">
            </div>
            <div class="col-md-5">
              <h1 class="text-black"> Web Interface </h1>
