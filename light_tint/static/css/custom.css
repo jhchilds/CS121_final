@@ -46,7 +46,7 @@ body{
 }
 
 .site-content{
-  background-image: url('../images/candle.jpeg');
+  background-image: url('../static/images/candle.jpeg');
   /* background-color: black; */
   background-attachment: fixed;
   background-size: cover;
