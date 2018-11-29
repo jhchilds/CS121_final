@@ -69,9 +69,8 @@ def index():
     return render_template('index.php');
 
 @app.route('/css', methods=['GET'])
-def index():
+def css():
     return render_template('css/custom.css');
-
 
 
 @app.route('/api/relays', methods=['GET'])
