@@ -66,7 +66,7 @@ def UpdatePinFromRelayObject(relay):
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('index.php');
+    return render_template('new_index.html');
 
 @app.route('/css/<path:filename>')
 def download_file(filename):
