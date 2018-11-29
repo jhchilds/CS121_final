@@ -39,7 +39,7 @@ def photocell_thread():
             # What it does: if bright turn off
 
             # if photcell val is less than threshold but relay off: switch
-            time.sleep(0.000002)
+            time.sleep(0.000000002)
             if photocell_on:
                 if photo_val < threshold:  # if bright turn off
                     GPIO.output(relayIdToPin[1], relayStateToGPIOState["on"])
