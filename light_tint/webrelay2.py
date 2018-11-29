@@ -68,9 +68,9 @@ def UpdatePinFromRelayObject(relay):
 def index():
     return render_template('index.php');
 
-@app.route('/css', methods=['GET'])
+@app.route('/', methods=['GET'])
 def css():
-    return render_template('css/custom.css');
+    return app.send_static_file('css/custom.css');
 
 
 @app.route('/api/relays', methods=['GET'])
