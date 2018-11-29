@@ -49,7 +49,7 @@ myApp.controller('RelaysController', ['$scope', '$http', function($scope, $http)
 
         if ($scope.relays[1].state == "off") {
             console.log("photocell is already on");
-            // dont let smart tint turn on, or turn photocell off
+            // or turn photocell off
 
             //TODO: condense these functions
 
