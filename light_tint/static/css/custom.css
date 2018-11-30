@@ -348,6 +348,40 @@ margin: 2%;
   color: 	rgb(255,99,71);
 }
 
+
+
+/********************* references.html Styling*********************/
+
+.references-content{
+  background-color: black;
+  /* background-color: black; */
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+.references-title, .references-desc{
+  color: white;
+  /* background-color: white; */
+  font-family:'Ubuntu';
+  border-radius: 1.5em;
+  /* margin-left: 39%; */
+}
+
+.references-title{
+  margin-top: 30%;
+  margin-bottom: 10%;
+  /* padding-left: 15%; */
+  font-size: 50px;
+}
+
+.references-desc{
+  margin-bottom: 40%;
+  /* display: none; */
+  text-align: center;
+   /* font-size: 15px; */
+   /* padding-right: 15%; */
+}
 /*********************Styling for Tablets & Mobile Devices*********************/
 
 @media screen and (max-width:1200px){
