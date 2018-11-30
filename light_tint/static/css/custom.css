@@ -70,7 +70,7 @@ body{
 .site-desc{
   margin-bottom: 40%;
   /* display: none; */
-  /* text-align: center; */
+  text-align: center;
    /* font-size: 15px; */
    /* padding-right: 15%; */
 }
@@ -85,7 +85,7 @@ body{
 }
 
 .site-btn2{
-  /* margin-left: 10%; */
+  margin-left: 13%;
   background-color: black;
   color: white;
   margin-bottom: 90%;
@@ -404,6 +404,7 @@ margin: 2%;
   .section-1 .col-md-4{
     padding: 5%;
     margin-left: 13%;
+    padding-left: 12%;
   }
 
   .section-1 .card{
@@ -427,6 +428,11 @@ margin: 2%;
     margin-top: 5%;
   }
 
+}
+@media screen and (max-width:442px){
+  .site-content .site-title{
+    padding-left: 15%;
+  }
 }
 @media screen and (max-width:380px){
   .section-2 .col-md-7 img{
