@@ -404,6 +404,9 @@ margin: 2%;
  .section-2c .col-md-7 img{
     width:300px;
  }
+ .section-2d .col-md-7 img{
+    width:300px;
+ }
 
 }
 
@@ -463,6 +466,9 @@ margin: 2%;
   .section-2c .col-md-5{
     padding: 0% 15%;
   }
+  .section-2d .col-md-5{
+    padding: 0% 15%;
+  }
 
   footer input[type="button"]{
     margin-top: 5%;
@@ -485,6 +491,9 @@ margin: 2%;
   margin-left: 7%;
   }
   .section-2c .col-md-7 img{
+  margin-left: 7%;
+  }
+  .section-2d .col-md-7 img{
   margin-left: 7%;
   }
 }
