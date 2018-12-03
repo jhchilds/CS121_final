@@ -286,6 +286,37 @@ margin: 2%;
   margin-top: 7%;
   font-size: 23px;
 }
+/*************************SECTION 2d Styling (NEXT STEPS)**********************/
+.section-2d{
+  margin-top: 8%;
+}
+.section-2d .heading-1{
+  margin-top: 8%;
+  padding-top: 2%;
+  color: black;
+}
+
+.section-2d .heading-2{
+  margin-top: 2%;
+  margin-bottom: 5%;
+  font-size: 35px;
+  color: black;
+}
+
+.section-2d .row .col-md-7, .col-md-5{
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.section-2d .col-md-7 img{
+  width: 590px;
+}
+
+.section-2d .para-1{
+  color: black;
+  font-family: 'Ubuntu';
+  margin-top: 7%;
+  font-size: 23px;
+}
 /*************************SECTION 3 Styling**************************/
 .section-3 .container-fluid{
   background-image: url('../images/candle.jpeg');
