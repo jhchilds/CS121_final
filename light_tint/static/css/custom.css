@@ -490,6 +490,7 @@ margin: 2%;
     width:300px;
  }
 
+
 }
 
 @media screen and (max-width:820px){
@@ -560,6 +561,10 @@ margin: 2%;
 @media screen and (max-width:442px){
   .site-content .site-title{
     padding-left: 15%;
+  }
+
+  .onoff img{
+    width: 40%;
   }
 }
 @media screen and (max-width:380px){
