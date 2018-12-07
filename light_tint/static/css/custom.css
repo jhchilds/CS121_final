@@ -416,6 +416,53 @@ margin: 2%;
    /* font-size: 15px; */
    /* padding-right: 15%; */
 }
+
+
+/********************* contact.html Styling*********************/
+
+
+
+.contact-content{
+  background-color: black;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.contact-title, .contact-desc{
+  color: white;
+  /* background-color: white; */
+  font-family:'Ubuntu';
+  border-radius: 1.5em;
+  /* margin-left: 39%; */
+}
+
+.contact-title{
+  margin-top: 30%;
+  margin-bottom: 10%;
+  /* padding-left: 15%; */
+  font-size: 50px;
+}
+
+.contact-desc{
+  margin-bottom: 40%;
+  /* display: none; */
+  text-align: center;
+   /* font-size: 15px; */
+   /* padding-right: 15%; */
+}
+
+
+.contact-btn1{
+  /* margin-left: 0%; */
+  background-color: black;
+  color: white;
+  margin-bottom: 90%;
+  margin-top: 30%;
+  width: 100%;
+}
+
+
+
 /*********************Styling for Tablets & Mobile Devices*********************/
 
 @media screen and (max-width:1200px){
