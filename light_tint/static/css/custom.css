@@ -460,7 +460,11 @@ margin: 2%;
   margin-top: 30%;
   width: 100%;
 }
+/********************* app.html Styling*********************/
 
+.onoff img{
+  width: 10%;
+}
 
 
 /*********************Styling for Tablets & Mobile Devices*********************/
