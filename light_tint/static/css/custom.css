@@ -125,7 +125,9 @@ body{
 
 }
 
-.card{
+.section-1 .card{
+margin-left:  0%;
+
 
 }
 
@@ -529,7 +531,7 @@ margin: 2%;
 
   .section-1 .col-md-4{
     padding: 5%;
-    margin-left: 13%;
+    margin-left: 7%;
     padding-left: 12%;
   }
 
